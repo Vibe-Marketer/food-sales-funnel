@@ -1,0 +1,87 @@
+// --------------------
+// Include Fonts Here
+// --------------------
+@font-face {
+  font-family: 'Inter Regular';
+  src: url('https://d2saw6je89goi1.cloudfront.net/uploads/digital_asset/file/721254/Inter-Regular.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$header-font: 'Poppins', sans-serif;
+$body-font: 'Inter Regular', serif;
+
+// --------------------
+//  Include Basic Typography
+// --------------------
+
+:root,
+html,
+body {
+    font-size: 16px;
+    @include media-breakpoint-up(md) {
+        font-size: 17px;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 19px;
+    }
+}
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+    color: $body;
+    &.scroll-lock {
+        max-height: 100%;
+        overflow-y: hidden;
+    }
+}
+* {
+    line-height: 1.5;
+    margin-top: 0;
+    box-sizing: border-box;
+    font-family: $body-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: $headings;
+    font-family: $header-font;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+h1, .h1 {
+    font-size: 2.1rem;
+    @include media-breakpoint-up(md) {
+        font-size: 2.5rem;
+    }
+}
+h2, .h2 {
+    font-size: 1.6rem;
+    @include media-breakpoint-up(md) {
+        font-size: 2.2rem;
+    }
+}
+h3, .h3 {
+    font-size: 1.5rem;
+}
+h4, .h4 {
+    font-size: 1.1rem;
+}
+h5, .h5 {
+    font-size: .95rem;
+    margin-bottom: 12px;
+}
+
+// Hero Specific Font Sizes
+.eyebrow {
+    font-family: $body-font;
+    text-transform: uppercase;
+}
+.subheadline {
+    font-size: 1.2rem;
+}
